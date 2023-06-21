@@ -1,38 +1,16 @@
-import { NextPage, GetStaticProps, NextPageContext } from "next";
-import Head from "next/head";
-import { ReactNode } from "react";
+async function getProjects() {
+  const res = await fetch("https://worldtimeapi.org/api/ip");
+  const projects = await res.json();
 
-type SSGProps = {
-  message: string;
-};
+  return projects;
+}
 
-const SSG = async () => {
-  const message = (await getStaticProps()) as ReactNode;
+export default async function Dashboard() {
+  const projects = (await getProjects()) as { [env: string]: string };
 
   return (
-    <div>
-      <Head>
-        <title>Static Site Generation</title>
-        <link rel="icon" href="../favicon.ico" />
-      </Head>
-      <main>
-        <p>
-          このページは静的サイト生成によってビルド時に生成されたページです。
-        </p>
-        <p>{message}</p>
-      </main>
-    </div>
+    <ul>
+      <li>{projects.datetime}</li>
+    </ul>
   );
-};
-
-const getStaticProps = () => {
-  return new Promise((resolve) => {
-    const timestamp = new Date();
-    const message = `${timestamp} に getStaticProps が実行されました。`;
-    setTimeout(() => {
-      resolve(message);
-    }, 2000);
-  });
-};
-
-export default SSG;
+}
