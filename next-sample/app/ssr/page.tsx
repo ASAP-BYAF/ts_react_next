@@ -30,7 +30,6 @@ async function getProjects() {
 
 export default async function Dashboard() {
   const projects = (await getProjects()) as { [env: string]: string };
-  console.log(projects);
 
   return (
     <ul>
