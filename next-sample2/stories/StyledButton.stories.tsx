@@ -5,20 +5,34 @@ import { StyledButton, StyledButtonProps } from "../components/StyledButton";
 const meta: Meta<typeof StyledButton> = {
   title: "Example/StyledButton",
   component: StyledButton,
+  argTypes: {
+    onClick: {
+      action: "clicked",
+    },
+  },
 };
 
 export default meta;
-// type Story = StoryObj<StyledButtonProps>;
+type Story = StoryObj<typeof StyledButton>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = () => {
-  return <StyledButton variant="primary">Primary</StyledButton>;
+export const Primary: Story = {
+  args: {
+    variant: "primary",
+    children: "Primary",
+  },
 };
 
-export const Success = () => {
-  return <StyledButton variant="success">Success</StyledButton>;
+export const Success: Story = {
+  args: {
+    variant: "success",
+    children: "success",
+  },
 };
 
-export const Transparent = () => {
-  return <StyledButton variant="transparent">Transparent</StyledButton>;
+export const Transparent: Story = {
+  args: {
+    variant: "transparent",
+    children: "transparent",
+  },
 };
