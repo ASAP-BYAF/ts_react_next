@@ -23,7 +23,6 @@ const variants = {
 export type StyledButtonProps = {
   variant: keyof typeof variants;
 };
-console.log(typeof variants);
 
 export const StyledButton = styled.button<StyledButtonProps>`
   ${({ variant }) => {
