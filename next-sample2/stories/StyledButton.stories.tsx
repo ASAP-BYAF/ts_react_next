@@ -5,6 +5,7 @@ import { StyledButton, StyledButtonProps } from "../components/StyledButton";
 const meta: Meta<typeof StyledButton> = {
   title: "Example/StyledButton",
   component: StyledButton,
+  tags: ["autodocs"],
   argTypes: {
     variant: {
       control: { type: "radio" },
