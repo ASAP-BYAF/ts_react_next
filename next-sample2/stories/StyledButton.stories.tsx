@@ -8,26 +8,17 @@ const meta: Meta<typeof StyledButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof StyledButton>;
+// type Story = StoryObj<StyledButtonProps>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
-  args: {
-    variant: "primary",
-    children: "Primary",
-  },
+export const Primary = () => {
+  return <StyledButton variant="primary">Primary</StyledButton>;
 };
 
-export const Success: Story = {
-  args: {
-    variant: "success",
-    children: "success",
-  },
+export const Success = () => {
+  return <StyledButton variant="success">Success</StyledButton>;
 };
 
-export const Transparent: Story = {
-  args: {
-    variant: "transparent",
-    children: "transparent",
-  },
+export const Transparent = () => {
+  return <StyledButton variant="transparent">Transparent</StyledButton>;
 };
