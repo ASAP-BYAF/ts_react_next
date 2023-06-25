@@ -4,12 +4,13 @@ import "./index.css";
 import App from "./App";
 // import Hello from "./components/Hello";
 // import Parent from "./components/ContainerSample";
-import Page from "./components/ContextSample";
-import Counter from "./components/CounterSample";
-import NewCounter from "./components/NewCounterSample";
-// import { Parent } from "./components/Parent";
-import Parent from "./components/Callback";
-import UseMemosample from "./components/UseMemo";
+// import Page from "./components/ContextSample";
+// import Counter from "./components/CounterSample";
+// import NewCounter from "./components/NewCounterSample";
+import { Parent } from "./components/Parent";
+import { Parent2 } from "./components/Parent2";
+// import Parent from "./components/Callback";
+// import UseMemosample from "./components/UseMemo";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -21,10 +22,11 @@ root.render(
     <App />
     {/* <Hello /> */}
     <Parent />
-    <Page />
+    <Parent2 />
+    {/* <Page />
     <Counter initialValue={1} />
     <NewCounter initialValue={1} />
-    <UseMemosample />
+    <UseMemosample /> */}
     {/* </React.StrictMode> */}
   </React.Fragment>
 );
