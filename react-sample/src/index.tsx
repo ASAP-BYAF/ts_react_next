@@ -9,7 +9,7 @@ import App from "./App";
 // import NewCounter from "./components/NewCounterSample";
 import { Parent } from "./components/Parent";
 import { Parent2 } from "./components/Parent2";
-// import Parent from "./components/Callback";
+import CallBack from "./components/Callback";
 // import UseMemosample from "./components/UseMemo";
 import reportWebVitals from "./reportWebVitals";
 
@@ -23,6 +23,7 @@ root.render(
     {/* <Hello /> */}
     <Parent />
     <Parent2 />
+    <CallBack />
     {/* <Page />
     <Counter initialValue={1} />
     <NewCounter initialValue={1} />

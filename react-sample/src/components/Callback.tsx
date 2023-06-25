@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, memo } from "react";
 
 type ButtonProps = {
   onClick: () => void;
@@ -11,21 +11,21 @@ const DecrementButton = (props: ButtonProps) => {
   return <button onClick={onClick}>Decrement</button>;
 };
 
-const IncrementButton = React.memo((props: ButtonProps) => {
+const IncrementButton = memo((props: ButtonProps) => {
   const { onClick } = props;
 
   console.log("IncrementButton が再描画されました。");
   return <button onClick={onClick}>Increment</button>;
 });
 
-const DoubleButton = (props: ButtonProps) => {
+const DoubleButton = memo((props: ButtonProps) => {
   const { onClick } = props;
 
   console.log("DoubleButton が再描画されました。");
   return <button onClick={onClick}>Double</button>;
-};
+});
 
-const Parent = () => {
+const CallBack = () => {
   const [count, setCount] = useState(0);
   const decrement = () => {
     setCount((c) => c - 1);
@@ -47,4 +47,4 @@ const Parent = () => {
   );
 };
 
-export default Parent;
+export default CallBack;
