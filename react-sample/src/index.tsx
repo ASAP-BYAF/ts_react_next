@@ -14,6 +14,7 @@ import UseMemo from "./components/UseMemo";
 import { Clock } from "./components/UseEffect";
 import { Parent3 } from "./components/useContext";
 import ImageUploader from "./components/useRef";
+import Parent4 from "./components/useImperative";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -30,6 +31,7 @@ root.render(
     <Clock />
     <Parent3 />
     <ImageUploader />
+    <Parent4 />
     {/* <Page />
     <Counter initialValue={1} />
     <NewCounter initialValue={1} /> */}
