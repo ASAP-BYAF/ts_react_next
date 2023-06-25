@@ -13,6 +13,7 @@ import CallBack from "./components/Callback";
 import UseMemo from "./components/UseMemo";
 import { Clock } from "./components/UseEffect";
 import { Parent3 } from "./components/useContext";
+import ImageUploader from "./components/useRef";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -28,6 +29,7 @@ root.render(
     <UseMemo />
     <Clock />
     <Parent3 />
+    <ImageUploader />
     {/* <Page />
     <Counter initialValue={1} />
     <NewCounter initialValue={1} /> */}
