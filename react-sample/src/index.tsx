@@ -12,6 +12,7 @@ import { Parent2 } from "./components/Parent2";
 import CallBack from "./components/Callback";
 import UseMemo from "./components/UseMemo";
 import { Clock } from "./components/UseEffect";
+import { Parent3 } from "./components/useContext";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -26,6 +27,7 @@ root.render(
     <CallBack />
     <UseMemo />
     <Clock />
+    <Parent3 />
     {/* <Page />
     <Counter initialValue={1} />
     <NewCounter initialValue={1} /> */}
