@@ -10,7 +10,7 @@ import App from "./App";
 import { Parent } from "./components/Parent";
 import { Parent2 } from "./components/Parent2";
 import CallBack from "./components/Callback";
-// import UseMemosample from "./components/UseMemo";
+import UseMemo from "./components/UseMemo";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -20,14 +20,13 @@ root.render(
   <React.Fragment>
     {/* <React.StrictMode> */}
     <App />
-    {/* <Hello /> */}
     <Parent />
     <Parent2 />
     <CallBack />
+    <UseMemo />
     {/* <Page />
     <Counter initialValue={1} />
-    <NewCounter initialValue={1} />
-    <UseMemosample /> */}
+    <NewCounter initialValue={1} /> */}
     {/* </React.StrictMode> */}
   </React.Fragment>
 );
